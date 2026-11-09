@@ -8,7 +8,7 @@
   "tagline": "Small sounds. Big character.",
   "description": "A local-first retro sound effects workbench. Start with a preset, shape the sound, and export a WAV or editable settings.",
   "entryPoint": "index.html",
-  "status": "local-preview",
+  "status": "publication-prepared",
   "features": [
     "Eight sound presets",
     "Five waveforms",
@@ -46,5 +46,7 @@
     "name": "jsfxr",
     "url": "https://sfxr.me/"
   },
-  "license": "MIT"
+  "license": "MIT",
+  "repositoryUrl": "https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot",
+  "appUrl": "https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/"
 }

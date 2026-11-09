@@ -57,7 +57,12 @@ Screenshots are genuine Chromium captures of the localhost app. The narrow layou
 - `tests/`: engine safety/reproducibility and development-server tests.
 - `app.json`: catalog metadata for Kata Tool Shed.
 
-`app.json` currently marks this work **local-preview**. The repository and public app URL have not been created or published as part of this local build. The sibling hub changes should only add launch/source links once those destinations exist.
+`app.json` provides catalog metadata. The GitHub Actions workflow checks and builds every change, then deploys the static app from `main` to GitHub Pages when Pages is configured for Actions. Pull requests run checks without deploying.
+
+- Repository: https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot
+- Intended public app URL: https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/
+
+Check the latest Pages workflow run to verify the currently published commit.
 
 ## Inspiration and license
 
