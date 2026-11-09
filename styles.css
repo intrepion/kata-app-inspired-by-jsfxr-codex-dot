@@ -8,3 +8,5 @@
 @media(max-width:980px){.seed-label{display:flex;grid-column:1/-1;grid-row:6;margin-top:22px}.seed-input{display:block;grid-column:1/-1;grid-row:7;max-width:240px}.seed-note{display:block;grid-column:1/-1;grid-row:8}.seed-label span{margin-left:20px;margin-right:auto}}
 
 .wave-hint{font-size:10px;color:#68716b;line-height:1.6;margin-top:10px}input:disabled{opacity:.35;cursor:not-allowed}
+
+@media(max-width:360px){.transport{flex-wrap:wrap}.transport .play-button{flex-basis:100%}.transport .history-buttons{margin-left:auto}.transport .auto-preview{min-height:32px}}

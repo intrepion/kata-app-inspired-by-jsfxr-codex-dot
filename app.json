@@ -8,7 +8,7 @@
   "tagline": "Small sounds. Big character.",
   "description": "A local-first retro sound effects workbench. Start with a preset, shape the sound, and export a WAV or editable settings.",
   "entryPoint": "index.html",
-  "status": "publication-prepared",
+  "status": "published",
   "features": [
     "Eight sound presets",
     "Five waveforms",

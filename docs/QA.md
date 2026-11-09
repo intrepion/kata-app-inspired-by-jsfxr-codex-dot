@@ -34,3 +34,9 @@ Browser playback state was verified, but this is not a human acoustic listening 
 ## Screenshots
 
 Unedited full-page browser captures are in `screenshots/`, with dimensions, SHA-256 checksums, and localhost provenance in `manifest.json`. A 15-pixel scrollbar is excluded from the captured images: desktop 1,165 px wide from a 1,180 CSS-pixel viewport; narrow 485 px wide from a 500 CSS-pixel viewport.
+
+## Publication follow-up
+
+The public repository and GitHub Pages app were published on 2026-11-09. Initial deployment of `0ec166160635772f52d726fc10161108cc57e21b` passed all 12 tests and its build/deploy jobs: https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot/actions/runs/42713042074 . Public HTML, CSS, both JavaScript modules, favicon, and screenshots returned HTTP 200 and matched the built bytes.
+
+Additional Chrome-on-macOS localhost checks covered audio preview and 390/320 CSS-pixel responsive layouts. A cramped 320-pixel transport row was corrected by wrapping the preview button above secondary controls. This is viewport testing, not physical-phone testing.

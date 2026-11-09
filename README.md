@@ -60,7 +60,7 @@ Screenshots are genuine Chromium captures of the localhost app. The narrow layou
 `app.json` provides catalog metadata. The GitHub Actions workflow checks and builds every change, then deploys the static app from `main` to GitHub Pages when Pages is configured for Actions. Pull requests run checks without deploying.
 
 - Repository: https://github.com/intrepion/kata-app-inspired-by-jsfxr-codex-dot
-- Intended public app URL: https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/
+- Public app URL: https://intrepion.github.io/kata-app-inspired-by-jsfxr-codex-dot/
 
 Check the latest Pages workflow run to verify the currently published commit.
 
