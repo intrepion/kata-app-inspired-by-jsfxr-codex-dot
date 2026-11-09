@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "kind": "app",
+  "title": "Kata Sound Lab",
+  "repository": "kata-app-inspired-by-jsfxr-codex-dot",
+  "section": "Kata Tool Shed",
+  "category": "Audio",
+  "tagline": "Small sounds. Big character.",
+  "description": "A local-first retro sound effects workbench. Start with a preset, shape the sound, and export a WAV or editable settings.",
+  "entryPoint": "index.html",
+  "status": "local-preview",
+  "features": [
+    "Eight sound presets",
+    "Five waveforms",
+    "Deterministic seeded synthesis",
+    "Randomize and mutate",
+    "WAV export",
+    "JSON settings import/export",
+    "Undo and redo"
+  ],
+  "screenshots": [
+    {
+      "src": "docs/screenshots/desktop.jpg",
+      "width": 1165,
+      "height": 1185,
+      "alt": "Kata Sound Lab desktop workbench with presets, waveform, controls, and export",
+      "caption": "Coin pickup preset in the desktop layout.",
+      "capturedAt": "2026-11-09T21:50:07.827680+00:00",
+      "sha256": "de53252a5f5bbbc1c3ddc95f7e7c35faa90beed1fd16deff299d13e3a4164a02",
+      "source": "http://127.0.0.1:4173/",
+      "captureMethod": "Chromium via CUA, genuine full-page browser capture; no image editing."
+    },
+    {
+      "src": "docs/screenshots/mobile.jpg",
+      "width": 485,
+      "height": 1636,
+      "alt": "Kata Sound Lab responsive narrow-screen layout with vertically stacked controls",
+      "caption": "Coin pickup preset in the 500 CSS-pixel-wide responsive layout.",
+      "capturedAt": "2026-11-09T21:50:07.828074+00:00",
+      "sha256": "0ed305c745959ef17aa347b1106ecde6774e83d30ec11e0575f2cd8794e901cc",
+      "source": "http://127.0.0.1:4173/",
+      "captureMethod": "Chromium via CUA, genuine full-page browser capture; no image editing."
+    }
+  ],
+  "inspiration": {
+    "name": "jsfxr",
+    "url": "https://sfxr.me/"
+  },
+  "license": "MIT"
+}

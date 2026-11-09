@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#eeede5">
+  <meta name="description" content="Make small sounds with big character. An original, local-first retro sound effects workbench for Kata Tool Shed.">
+  <title>Kata Sound Lab · Kata Tool Shed</title>
+  <link rel="icon" href="./favicon.svg" type="image/svg+xml"><link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<a class="skip" href="#workbench">Skip to sound controls</a>
+<header class="masthead"><div class="brand"><svg class="brand-icon" viewBox="0 0 32 32" aria-hidden="true"><path d="M5 15 16 5l11 10v13H5Z"/><path d="M12 28V17h8v11M11 11h10"/></svg><span>KATA <b>TOOL SHED</b></span></div><span class="edition"><span class="live-dot"></span> TOOL 001 <span class="edition-extra"> / SOUND & SIGNAL</span></span></header>
+<main>
+  <section class="intro"><div><p class="eyebrow">A LITTLE LAB FOR BIG IDEAS</p><h1>Kata Sound Lab<span class="title-dot">.</span></h1><p class="lede">Small sounds. Big character. Make something worth hearing.</p></div><span class="local-badge"><svg viewBox="0 0 20 20" aria-hidden="true"><path d="M5 9V6a5 5 0 0 1 10 0v3M3 9h14v9H3Z"/></svg>Made in your browser<br><small>No uploads. No account.</small></span></section>
+  <div class="workbench" id="workbench">
+    <aside class="preset-panel" aria-labelledby="presets-heading"><div class="section-label"><h2 id="presets-heading">01 / START WITH A SOUND</h2><span>8</span></div><div class="presets" id="presets"></div><div class="preset-tip"><span>↳</span><p>Pick a starting point.<br>Make it your own.</p></div><div class="inspiration">Inspired by <a href="https://sfxr.me/" target="_blank" rel="noopener noreferrer">jsfxr ↗</a><br>Built for your next game.</div></aside>
+    <section class="editor" aria-label="Sound editor">
+      <div class="screen">
+        <div class="screen-heading"><div><span class="screen-tag">LIVE WAVEFORM</span><h2 id="sound-title">Coin pickup</h2></div><span class="signal-pill" id="signal-state">READY</span></div>
+        <canvas id="waveform" width="1400" height="280" role="img" aria-label="Waveform of the current sound"></canvas>
+        <div class="screen-footer"><span id="wave-info">SQUARE WAVE</span><span id="duration-info">0.32 s</span><span>44.1 kHz / MONO</span></div>
+      </div>
+      <div class="transport"><button class="play-button" id="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 5 11 7-11 7Z"/></svg><span>Preview sound</span><kbd>SPACE</kbd></button><label class="auto-preview"><input id="auto-preview" type="checkbox"><span>Auto-preview</span></label><div class="history-buttons"><button class="icon-button" id="undo" aria-label="Undo change" title="Undo change">↶</button><button class="icon-button" id="redo" aria-label="Redo change" title="Redo change">↷</button></div></div>
+      <div class="editor-controls"><div class="controls-heading"><h2>02 / SHAPE YOUR SOUND</h2><button id="reset" class="text-button">Reset preset ↺</button></div>
+        <fieldset class="wave-field"><legend>Waveform</legend><div class="wave-options" id="wave-options"></div><p id="wave-hint" class="wave-hint" hidden>Noise has no musical pitch. Shape it with the envelope and low-pass cutoff.</p></fieldset>
+        <div class="control-groups" id="control-groups"></div>
+        <details class="texture"><summary><span>Texture & modulation</span><span class="detail-hint">MAKE IT INTERESTING <b>+</b></span></summary><div class="texture-grid" id="texture-controls"></div></details>
+        <div class="experiment-row"><button class="secondary-button" id="randomize"><span aria-hidden="true">⚄</span> Randomize</button><button class="secondary-button" id="mutate"><span aria-hidden="true">⤨</span> Mutate</button><p>A new idea, or a small happy accident.</p></div>
+      </div>
+    </section>
+    <aside class="output-panel" aria-labelledby="export-heading"><div class="section-label"><h2 id="export-heading">03 / TAKE IT WITH YOU</h2><span>↗</span></div><div class="output-body"><div class="output-illustration" aria-hidden="true"><svg viewBox="0 0 180 150"><path class="file-back" d="m60 18 64 9 18 26-13 89-88-13Z"/><path class="file-front" d="M37 7h67l28 28v102H37Z"/><path class="file-fold" d="M104 7v28h28"/><path class="sound-lines" d="M55 76v12m9-24v36m10-48v60m10-42v24m10-37v50m10-43v36m10-20v10"/><text x="52" y="127">.WAV</text></svg></div><label class="field-label" for="filename">Sound name</label><input class="name-input" id="filename" value="coin-pickup" maxlength="60" autocomplete="off" spellcheck="false"><div class="export-spec"><span>WAV audio</span><span>16-bit PCM</span></div><button class="download-button" id="download-wav"><span aria-hidden="true">↓</span> Download WAV</button><p class="export-note" id="file-info">Ready for your game engine.</p><div class="output-divider"></div><p class="save-title">Keep the recipe.</p><p class="save-description">Save editable settings to pick up where you left off.</p><button class="settings-button" id="download-settings">↓ Save settings <span>.json</span></button><button class="settings-button" id="import-settings">↑ Open settings <span>.json</span></button><input id="settings-file" type="file" accept="application/json,.json" hidden><label class="field-label seed-label" for="seed">Noise seed <span title="The same settings and seed reproduce the same samples.">REPRODUCIBLE</span></label><input class="seed-input" id="seed" type="number" min="0" max="4294967295" step="1" value="42"><p class="seed-note">Same settings. Same sound.</p></div></aside>
+  </div>
+  <div class="status-bar"><span class="status-light" aria-hidden="true"></span><p id="status" role="status" aria-live="polite">Pick a preset, tweak a dial, and press play.</p><span class="session-note" id="session-note">YOUR LAST SOUND IS SAVED ON THIS DEVICE</span></div>
+  <footer><p>CRAFTED FOR PLAY. <span>AND EVERYTHING IN BETWEEN.</span></p><p>Kata Tool Shed <span>/</span> Sound Lab v1.0</p></footer>
+</main><noscript><p class="noscript">JavaScript is needed to synthesize and export sounds. No data is sent to a server.</p></noscript><script type="module" src="./src/app.js"></script>
+</body></html>
